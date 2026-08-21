@@ -7,7 +7,7 @@ int countGreaterThan(int* array, int size, int limit) {
     int contador = 0;
     for (int i = 0; i < size; i++) {
         if (array[i] > limit) {
-            contador = contador + 1;
+            contador++;
         }
     }
     return contador;
@@ -15,9 +15,9 @@ int countGreaterThan(int* array, int size, int limit) {
 
 double average(int* array, int size) {
     if (size == 0) {
-        return 0;
+        return 0.0;
     }
-    double suma = 0;
+    double suma = 0.0;
     for (int i = 0; i < size; i++) {
         suma = suma + array[i];
     }
@@ -35,15 +35,15 @@ void sumByRow(int matrix[3][4], int result[3]) {
 }
 
 int countValue(int matrix[3][4], int value) {
-    int cantidad = 0;
+    int contador = 0;
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
             if (matrix[i][j] == value) {
-                cantidad = cantidad + 1;
+                contador++;
             }
         }
     }
-    return cantidad;
+    return contador;
 }
 
 void findMinMax(int* array, int size, int* minResult, int* maxResult) {

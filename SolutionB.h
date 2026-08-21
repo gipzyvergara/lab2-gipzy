@@ -2,20 +2,15 @@
 #define SOLUTION_B_H
 
 #include <string>
-
 using namespace std;
 
-struct Participant {
-    string id;
-    string name;
-    double* scores;
-    int scoresCount;
-    int category;
-};
-
-Participant* createParticipant(string id, string name, int category);
-void addScore(Participant* participant, double score);
-double calculateAverage(Participant* participant);
-void freeParticipant(Participant* participant);
+int findProduct(string* productNames, int productCount, string name);
+void addProduct(string*& productNames, double*& productPrices, int*& productStock, int& productCount, string name, double price, int qty);
+void updateStock(int* productStock, int index, int newQty);
+void priceMinMax(double* productPrices, int productCount, double* minPrice, double* maxPrice);
+void salesMatrix(int productCount);
+void showInventory(string* productNames, double* productPrices, int* productStock, int productCount);
+void freeAll(string* productNames, double* productPrices, int* productStock);
+void runInventoryMenu();
 
 #endif

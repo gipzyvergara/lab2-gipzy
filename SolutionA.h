@@ -1,4 +1,3 @@
-
 #ifndef SOLUTION_A_H
 #define SOLUTION_A_H
 
